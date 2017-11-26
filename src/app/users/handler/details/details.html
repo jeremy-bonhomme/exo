@@ -1,0 +1,21 @@
+
+<div class="modal" id="user-modal">
+  <div class="modal-dialog" *ngIf="user">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Utilisateur n°{{ user.id }}</h2>
+        <button class="close" type="button" data-dismiss="modal" (click)="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><i class="ui-icon fa fa-user-circle-o"></i><span>{{ user.name }}</span></p>
+        <p><i class="ui-icon fa fa-envelope"></i><span>{{ user.email }}</span></p>
+        <p><i class="ui-icon fa fa-map-marker"></i><span>{{ user.address.street }}, {{ user.address.suite }}, {{ user.address.city }}, {{ user.address.zipcode }}</span></p>
+        <p><i class="ui-icon fa fa-phone"></i><span>{{ user.phone }}</span></p>
+        <p><i class="ui-icon fa fa-home"></i><span>{{ user.website }}</span></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="button" data-dismiss="modal" (click)="closeModal()">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
